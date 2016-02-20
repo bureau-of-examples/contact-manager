@@ -2,7 +2,7 @@
 
 module ContactManagerApp {
 
-
     let module = angular.module('contactManagerApp', ['ngMaterial']);
     module.controller('mainController', MainController);
+    module.service('userService', UserService);
 }
