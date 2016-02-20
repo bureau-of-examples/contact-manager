@@ -3,7 +3,7 @@
 npm install -g typescript //check with tsc.cmd --version
 npm install -g tsd
 tsd install --save angular angular-material
-
+npm install -g live-server
 
 Use this comment to provide intellisense for TypeScript file:
 <pre>

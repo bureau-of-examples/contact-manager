@@ -1,4 +1,8 @@
 /// <reference path="_all.ts" />
 
-let a = [1,2,3];
-let b = [...a, 4,5,6];
+module ContactManagerApp {
+
+
+    let module = angular.module('contactManagerApp', ['ngMaterial']);
+    module.controller('mainController', MainController);
+}

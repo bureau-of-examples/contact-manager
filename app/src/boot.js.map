@@ -1,1 +1,1 @@
-{"version":3,"file":"boot.js","sourceRoot":"","sources":["boot.ts"],"names":[],"mappings":"AAAA,gCAAgC"}
+{"version":3,"file":"boot.js","sourceRoot":"","sources":["boot.ts"],"names":["ContactManagerApp"],"mappings":"AAAA,gCAAgC;AAEhC,IAAO,iBAAiB,CAIvB;AAJD,WAAO,iBAAiB,EAAC,CAAC;IAGtBA,OAAOA,CAACA,MAAMA,CAACA,mBAAmBA,EAAEA,CAACA,YAAYA,CAACA,CAACA,CAAAA;AACvDA,CAACA,EAJM,iBAAiB,KAAjB,iBAAiB,QAIvB"}

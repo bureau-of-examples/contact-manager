@@ -1,4 +1,7 @@
 /// <reference path="_all.ts" />
-var a = [1, 2, 3];
-var b = a.concat([4, 5, 6]);
+var ContactManagerApp;
+(function (ContactManagerApp) {
+    var module = angular.module('contactManagerApp', ['ngMaterial']);
+    module.controller('mainController', ContactManagerApp.MainController);
+})(ContactManagerApp || (ContactManagerApp = {}));
 //# sourceMappingURL=boot.js.map
