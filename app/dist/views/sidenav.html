@@ -5,4 +5,15 @@
     <md-toolbar>
         <h1>Contacts</h1>
     </md-toolbar>
+    <md-content>
+        <md-list>
+            <md-list-item data-ng-repeat="user in vm.users | orderBy: 'name'">
+                <md-button  data-ng-click="vm.selectUser(user)"
+                            data-ng-class="{'selected': user === vm.selected}">
+                    <md-icon md-svg-icon="{{user.avatar}}" class="avatar"></md-icon>
+                    {{user.name}}
+                </md-button>
+            </md-list-item>
+        </md-list>
+    </md-content>
 </md-sidenav>

@@ -6,6 +6,7 @@ var ContactManagerApp;
     module.service('userService', ContactManagerApp.UserService);
     module.config(['$mdIconProvider', '$mdThemingProvider',
         function ($mdIconProvider, $mdThemingProvider) {
+            $mdIconProvider.defaultIconSet('assets/svg/avatars.svg', 128);
             $mdIconProvider.icon('menu', 'assets/svg/menu.svg', 24); //path relative to index.html
             $mdThemingProvider.theme('default').primaryPalette('blue').accentPalette('red');
         }]);
