@@ -23,6 +23,7 @@ module ContactManagerApp {
         selected: User = null;
         message: string = 'Hello from our controller';
         searchText: string = '';
+        tabIndex: Number = 0;
 
         toggleSidenav() : void {
             console.log('toggle left sidenav');
@@ -35,6 +36,7 @@ module ContactManagerApp {
             if(sidenav.isOpen()) {
                 sidenav.close();
             }
+            this.tabIndex = 0;
         }
     }
 }
