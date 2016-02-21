@@ -50,6 +50,21 @@ module ContactManagerApp {
                         date: new Date('2016-02-19')
                     }
                 ]
+            },
+            {
+                name: 'John Rambo',
+                avatar: 'svg-3',
+                bio: 'blah blah blah...',
+                notes: [
+                    {
+                        title: "pay back dinner3",
+                        date: new Date('2016-02-12')
+                    },
+                    {
+                        title: 'Buy flowers for birthday3',
+                        date: new Date('2016-02-19')
+                    }
+                ]
             }
         ];
     }

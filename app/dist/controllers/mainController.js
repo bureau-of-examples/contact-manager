@@ -8,6 +8,7 @@ var ContactManagerApp;
             this.users = [];
             this.selected = null;
             this.message = 'Hello from our controller';
+            this.searchText = '';
             var self = this;
             this.userService
                 .loadAllUsers()

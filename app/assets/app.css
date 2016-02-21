@@ -32,10 +32,6 @@ md-sidenav md-list {
     padding: 0 0 8px 0;
 }
 
-#content {
-    padding: 5px 40px 0 40px;
-}
-
 .avatar {
     position: relative;
     width: 128px;
@@ -51,3 +47,12 @@ md-sidenav md-list {
     -webkit-transform: scale(0.70);
     -moz-transform: scale(0.70);
 }
+
+#content {
+    padding: 5px 40px 0 40px;
+}
+
+#content md-icon.avatar{
+    margin-top: 10px;
+}
+
