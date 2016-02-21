@@ -2,8 +2,9 @@
 var ContactManagerApp;
 (function (ContactManagerApp) {
     var MainController = (function () {
-        function MainController(userService) {
+        function MainController(userService, $mdSidenav) {
             this.userService = userService;
+            this.$mdSidenav = $mdSidenav;
             this.users = [];
             this.message = 'Hello from our controller';
             var self = this;
@@ -14,7 +15,11 @@ var ContactManagerApp;
                 console.log(self.users);
             });
         }
-        MainController.$inject = ['userService'];
+        MainController.prototype.toggleSidenav = function () {
+            console.log('toggle left sidenav');
+            this.$mdSidenav('left').toggle();
+        };
+        MainController.$inject = ['userService', '$mdSidenav'];
         return MainController;
     })();
     ContactManagerApp.MainController = MainController;
