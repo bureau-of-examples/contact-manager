@@ -56,3 +56,11 @@ md-sidenav md-list {
     margin-top: 10px;
 }
 
+.scrollable-nav-content{
+    position:absolute;
+    top: 136px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: auto;
+}
