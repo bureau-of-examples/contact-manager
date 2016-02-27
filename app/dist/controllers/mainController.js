@@ -2,12 +2,13 @@
 var ContactManagerApp;
 (function (ContactManagerApp) {
     var MainController = (function () {
-        function MainController(userService, $mdSidenav, $mdToast, $mdDialog, $mdMedia) {
+        function MainController(userService, $mdSidenav, $mdToast, $mdDialog, $mdMedia, $mdBottomSheet) {
             this.userService = userService;
             this.$mdSidenav = $mdSidenav;
             this.$mdToast = $mdToast;
             this.$mdDialog = $mdDialog;
             this.$mdMedia = $mdMedia;
+            this.$mdBottomSheet = $mdBottomSheet;
             this.users = [];
             this.selected = null;
             this.message = 'Hello from our controller';
@@ -19,6 +20,7 @@ var ContactManagerApp;
                 .then(function (users) {
                 self.users = users;
                 self.selected = users[0];
+                self.userService.selectedUser = self.selected;
                 console.log(self.users);
             });
         }
@@ -28,6 +30,7 @@ var ContactManagerApp;
         };
         MainController.prototype.selectUser = function (user) {
             this.selected = user;
+            this.userService.selectedUser = user;
             var sidenav = this.$mdSidenav('left');
             if (sidenav.isOpen()) {
                 sidenav.close();
@@ -72,7 +75,19 @@ var ContactManagerApp;
                 console.log('You cancelled the dialog.');
             });
         };
-        MainController.$inject = ['userService', '$mdSidenav', '$mdToast', '$mdDialog', '$mdMedia'];
+        MainController.prototype.showContactOptions = function ($event) {
+            this.$mdBottomSheet.show({
+                parent: angular.element(document.getElementById('wrapper')),
+                templateUrl: 'dist/views/contactSheet.html',
+                controller: ContactManagerApp.ContactPanelController,
+                controllerAs: 'cp',
+                bindToController: true,
+                targetEvent: $event
+            }).then(function (clickedItem) {
+                clickedItem && console.log(clickedItem);
+            });
+        };
+        MainController.$inject = ['userService', '$mdSidenav', '$mdToast', '$mdDialog', '$mdMedia', '$mdBottomSheet'];
         return MainController;
     })();
     ContactManagerApp.MainController = MainController;
